@@ -17,7 +17,11 @@ body {
     justify-content: space-between;
 
     background-color: #1a1b1f;
-
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; 
+    z-index: 1000;
 }
 
 /*----------------LOGO/NOME----------------*/
@@ -93,6 +97,7 @@ main{
     display: flex;
     align-items: left;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 section h1{
