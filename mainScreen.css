@@ -16,7 +16,8 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background-color: #1a1b1f;
+    background-color: #0D1B2A;
+    
     position: fixed;
     left: 0;
     right: 0;
@@ -31,7 +32,7 @@ body {
     flex-direction: column;
 
     text-decoration: none;
-    color: #fde144;
+    color: #C9A45C;
 }
 
 #brandName{
@@ -69,7 +70,7 @@ body {
 }
 
 #mainNavigation a:hover{
-    color: #fde144;
+    color: #C9A45C;
 }
 
 /*----------------WHATSAPP----------------*/
@@ -77,7 +78,7 @@ body {
     display: inline-block;
     padding: 10px 18px;
 
-    background-color: #FFEF97;
+    background-color: #C9A45C;
     color: #301A1A;
 
     border-radius: 4px;
@@ -92,8 +93,8 @@ body {
 
 /*---------------HERO SECTION---------------*/
 main{
-    background-color: #1a1b1f;
-    min-height: 100vh;
+    background-color: #0D1B2A;
+    min-height: 600px;
     display: flex;
     align-items: left;
     justify-content: space-between;
@@ -105,7 +106,7 @@ section h1{
     font-size: 40px;
 }
 
-section div{
+.heroText {
     display: flex;
     flex-direction: column;
     color: #e0d7a1;
@@ -115,16 +116,13 @@ section div{
     top: 120px;
 }
 
-span.topText{
-    margin-top: 30px;
-}
 
 .topText {
     max-width: 650px;
 
     margin-top: 30px;
 
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.6;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 400;
@@ -140,12 +138,12 @@ span.topText{
 .imageWork {
     width: 100%;
     max-width: 600px;
-
+    margin-top: 130px;
 }
 
-.justiceImage{
-    border-radius: 15px;
-    box-shadow: 4px 10px 4px 4px #2e2e2e; 
+.justiceImage {
+    border-radius: 10px;
+    box-shadow: 4px 10px 4px 4px #2e2e2e;
     animation: emerge 1.2s ease forwards;
 }
 
@@ -171,8 +169,8 @@ span.topText{
 .heroLink{
     text-decoration: none;
     color: #000000;
-    font-size: 20px;
-    background-color: #74716c;
+    font-size: 18px;
+    background-color: #e0d7a1;
     padding: 12px;
     border-radius: 10px;
 }
