@@ -79,7 +79,7 @@ body {
     padding: 10px 18px;
 
     background-color: #C9A45C;
-    color: #301A1A;
+    color: #0D1B2A;
 
     border-radius: 4px;
     font-weight: 600;
@@ -179,6 +179,15 @@ section h1{
     color: white;
     transition: 0.5s ease;
     animation: hoverButton 0.6s ease forwards;
+}
+
+.heroLink:visited{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    background-color: #e0d7a1;
+    padding: 12px;
+    border-radius: 10px;
 }
 
 @keyframes hoverButton{
