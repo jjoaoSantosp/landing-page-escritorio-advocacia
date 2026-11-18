@@ -12,6 +12,9 @@
     --dark: #17202A;
     --black: #000000;
     --grayShadow: #2e2e2e;
+    
+    --officeSection: #CDBF9F;
+    --text-muted: #34404A;
 
     --hero-button-gap: 5rem;
 }
@@ -225,4 +228,53 @@ main{
     to{
         transform: translateY(-4px);
     }
+}
+
+.officeSection{
+    width: 100%;
+    min-height: 600px;
+    padding: 80px 60px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    background-color: var(--beige);
+}
+
+.officeImage{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 4px;
+    height: 450px;
+    object-fit: cover;
+} 
+
+.sectionLabel{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: var(--gold);
+}
+
+div h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    font-weight: 600;
+
+    color: var(--navy);
+}
+
+.officeDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+.officeDescription + .officeDescription {
+    margin-top: 20px;
 }
