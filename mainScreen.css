@@ -277,10 +277,13 @@ main{
 
 div h2{
     max-width: 560px;
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5rem;
+    
     line-height: 1.15;
     font-weight: 600;
+    
     margin-top: 12px;
     margin-bottom: 35px;
 
@@ -332,7 +335,7 @@ html{
     scroll-behavior: smooth;
 }
 
-/*---------------practice SECTION---------------*/
+/*---------------PRACTICE SECTION---------------*/
 .practiceSection{
     width: 100%;
     min-height: 600px;
@@ -343,6 +346,15 @@ html{
     gap: 80px;
     
     background-color: var(--navy);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.practiceSection.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .practiceText{
@@ -392,4 +404,80 @@ html{
     line-height: 1.7;
 
     color: rgba(248, 248, 246, 0.8);
+}
+
+.practiceList{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 550px;
+}
+
+.practiceHeader{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 500px;
+}
+
+.practiceHeader > p:last-child{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    
+    color: rgba(248, 248, 246, 0.8);
+}
+
+.practiceIntro{
+    display: flex;
+    flex-direction: column;
+}
+
+.practiceIntro > p{
+    max-width: 450px;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 400;
+
+    color: rgba(248, 248, 246, 0.7);
+}
+
+
+.practiceCall span{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: var(--gold);
+}
+
+.practiceCall p{
+    margin-top: 15px;
+
+    font-family: var(--font-body);
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.practiceCall a{
+    display: inline-block;
+    margin-top: 25px;
+    
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--beige);
+
+    transition: color 0.3s ease;
+}
+
+.practiceCall a:hover{
+    color: var(--gold);
 }
