@@ -481,3 +481,62 @@ html{
 .practiceCall a:hover{
     color: var(--gold);
 }
+
+/*------------DIFFERENTIAL SECTION-----------*/
+.differentialSection{
+    width: 100%;
+    height: 600px;
+
+    background-color: var(--beige);
+    padding: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.differentialOffice{
+    width: 100%;
+    max-width: 350px;
+    min-height: 300px;
+
+    padding: 35px 30px;
+
+    background-color: var(--navy);
+
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.differentialOffice > span{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+    color: var(--gold);
+}
+
+.titleDifferential{
+    margin-bottom: 20px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: var(--beige);
+}
+
+.differentialOffice p{
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: rgba(248, 248, 246, 0.7);
+}
