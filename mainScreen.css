@@ -540,3 +540,230 @@ html{
 
     color: rgba(248, 248, 246, 0.7);
 }
+
+/*----------- CONTACT SECTION ----------*/
+
+.contactSection {
+    width: 100%;
+    min-height: 700px;
+
+    background-color: var(--grayShadow);
+
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*----------- CONTACT HEADER ----------*/
+
+.contactHeader {
+    max-width: 650px;
+}
+
+.contactHeader .sectionLabel {
+    color: var(--gold);
+}
+
+.contactHeader h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    font-family: var(--font-sections);
+    font-size: 2.5rem;
+    line-height: 1.15;
+    font-weight: 600;
+
+    color: var(--beige);
+}
+
+.contactHeader > p:last-child {
+    max-width: 500px;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+
+    color: rgba(248, 248, 246, 0.7);
+}
+
+
+/*----------- OFFICES ----------*/
+
+.officeList {
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+.contactOffice {
+    min-height: 220px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(248, 248, 246, 0.2);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contactOffice > span {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: var(--gold);
+}
+
+.contactOffice h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--font-sections);
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    color: var(--beige);
+}
+
+.contactOffice p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    color: rgba(248, 248, 246, 0.7);
+}
+
+.contactOffice a {
+    margin-top: auto;
+
+    width: fit-content;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--beige);
+
+    transition: color 0.3s ease;
+}
+
+.contactOffice a:hover {
+    color: var(--gold);
+}
+
+
+/*----------- GENERAL CONTACT ----------*/
+
+.generalContact {
+    margin-top: 60px;
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(248, 248, 246, 0.2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 50px;
+}
+
+.generalContact > div:first-child {
+    max-width: 500px;
+}
+
+.generalContact > div:first-child > span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    color: var(--gold);
+}
+
+.generalContact h3 {
+    margin-top: 12px;
+    margin-bottom: 10px;
+
+    font-family: var(--font-sections);
+    font-size: 1.7rem;
+    font-weight: 500;
+
+    color: var(--beige);
+}
+
+.generalContact p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+
+    color: rgba(248, 248, 246, 0.7);
+}
+
+.generalContactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    text-align: right;
+}
+
+.generalContactInfo a {
+    text-decoration: none;
+
+    font-family: var(--font-body);
+    font-size: 1rem;
+
+    color: var(--white);
+
+    transition: color 0.3s ease;
+}
+
+.generalContactInfo a:hover {
+    color: var(--gold);
+}
+
+
+/*----------- DEVELOPER CONTACT ----------*/
+
+.developerContact {
+    margin-top: 50px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(248, 248, 246, 0.1);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 0.8rem;
+}
+
+.developerContact > span {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.developerContact p {
+    color: rgba(248, 248, 246, 0.6);
+}
+
+.developerContact a {
+    text-decoration: none;
+    color: rgba(248, 248, 246, 0.6);
+
+    transition: color 0.3s ease;
+}
+
+.developerContact a:hover {
+    color: var(--gold);
+}
