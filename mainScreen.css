@@ -540,16 +540,14 @@ html{
 
     color: rgba(248, 248, 246, 0.7);
 }
-
 /*----------- CONTACT SECTION ----------*/
 
 .contactSection {
     width: 100%;
-    min-height: 700px;
 
     background-color: var(--grayShadow);
 
-    padding: 80px;
+    padding: 60px 80px;
 
     display: flex;
     flex-direction: column;
@@ -559,64 +557,48 @@ html{
 /*----------- CONTACT HEADER ----------*/
 
 .contactHeader {
-    max-width: 650px;
+    margin-bottom: 35px;
 }
 
 .contactHeader .sectionLabel {
     color: var(--gold);
 }
 
-.contactHeader h2 {
-    margin-top: 15px;
-    margin-bottom: 20px;
-
-    font-family: var(--font-sections);
-    font-size: 2.5rem;
-    line-height: 1.15;
-    font-weight: 600;
-
-    color: var(--beige);
-}
-
-.contactHeader > p:last-child {
-    max-width: 500px;
-
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.7;
-
-    color: rgba(248, 248, 246, 0.7);
-}
-
 
 /*----------- OFFICES ----------*/
 
 .officeList {
-    margin-top: 60px;
+    width: 100%;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 30px;
-
-    width: 100%;
+    border-top: 1px solid rgba(248, 248, 246, 0.2);
 }
 
 .contactOffice {
-    min-height: 220px;
+    min-height: 180px;
 
-    padding: 25px 0;
-
-    border-top: 1px solid rgba(248, 248, 246, 0.2);
+    padding: 25px 25px 25px 0;
 
     display: flex;
     flex-direction: column;
+
+    border-right: 1px solid rgba(248, 248, 246, 0.2);
+}
+
+.contactOffice:not(:first-child) {
+    padding-left: 25px;
+}
+
+.contactOffice:last-child {
+    border-right: none;
 }
 
 .contactOffice > span {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
 
@@ -624,10 +606,10 @@ html{
 }
 
 .contactOffice h3 {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 
     font-family: var(--font-sections);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
 
     color: var(--beige);
@@ -635,20 +617,20 @@ html{
 
 .contactOffice p {
     font-family: var(--font-body);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
 
     color: rgba(248, 248, 246, 0.7);
 }
 
 .contactOffice a {
-    margin-top: auto;
+    margin-top: 18px;
 
     width: fit-content;
 
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 
     color: var(--beige);
@@ -664,24 +646,18 @@ html{
 /*----------- GENERAL CONTACT ----------*/
 
 .generalContact {
-    margin-top: 60px;
-    padding-top: 35px;
+    margin-top: 30px;
+    padding-top: 25px;
 
     border-top: 1px solid rgba(248, 248, 246, 0.2);
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-
-    gap: 50px;
-}
-
-.generalContact > div:first-child {
-    max-width: 500px;
+    align-items: center;
 }
 
 .generalContact > div:first-child > span {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 2px;
 
@@ -689,20 +665,20 @@ html{
 }
 
 .generalContact h3 {
-    margin-top: 12px;
-    margin-bottom: 10px;
+    margin-top: 8px;
 
     font-family: var(--font-sections);
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 500;
 
     color: var(--beige);
 }
 
 .generalContact p {
+    margin-top: 5px;
+
     font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
 
     color: rgba(248, 248, 246, 0.7);
 }
@@ -710,16 +686,14 @@ html{
 .generalContactInfo {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    text-align: right;
+    align-items: flex-end;
+    gap: 5px;
 }
 
 .generalContactInfo a {
     text-decoration: none;
 
-    font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     color: var(--white);
 
@@ -734,32 +708,33 @@ html{
 /*----------- DEVELOPER CONTACT ----------*/
 
 .developerContact {
-    margin-top: 50px;
-    padding-top: 20px;
+    margin-top: 35px;
+    padding-top: 15px;
 
     border-top: 1px solid rgba(248, 248, 246, 0.1);
 
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 }
 
 .developerContact > span {
     color: var(--gold);
-    font-size: 11px;
+
+    font-size: 10px;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
-.developerContact p {
-    color: rgba(248, 248, 246, 0.6);
+.developerContact p,
+.developerContact a {
+    color: rgba(248, 248, 246, 0.5);
 }
 
 .developerContact a {
     text-decoration: none;
-    color: rgba(248, 248, 246, 0.6);
 
     transition: color 0.3s ease;
 }
