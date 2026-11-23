@@ -742,3 +742,348 @@ html{
 .developerContact a:hover {
     color: var(--gold);
 }
+
+/*---------------- RESPONSIVIDADE ----------------*/
+/* Desktop (1024px ou mais) é a base e não é alterado aqui.
+   Abordagem desktop-first, com apenas 2 breakpoints:
+     • até 1023px → tablet (as regras também valem para o celular)
+     • até 767px  → celular (só sobrescreve o que muda em relação ao tablet) */
+
+
+/*------------ TABLET (até 1023px) ------------*/
+@media (max-width: 1023px) {
+
+    :root {
+        --gutter: clamp(24px, 3.5vw, 40px);   /* margem lateral única: header e seções alinhados */
+        --hero-button-gap: 1rem;              /* os 5rem do desktop não cabem na coluna */
+    }
+
+    html {
+        scroll-padding-top: 90px;             /* o header fixo não cobre o início da seção ao usar o menu */
+    }
+
+    /* Header: segue em uma linha; só compacta espaços e fontes */
+    #mainHeader {
+        padding: 0 var(--gutter);
+    }
+
+    #brandWork {
+        letter-spacing: 3px;
+    }
+
+    #mainNavigation ul {
+        gap: clamp(14px, 1.9vw, 24px);
+    }
+
+    #mainNavigation a {
+        font-size: clamp(14px, 1.6vw, 15px);
+        white-space: nowrap;
+    }
+
+    #mainNavigation li:last-child a {
+        padding: 8px 14px;
+    }
+
+    /* Hero: mantém 2 colunas, com mais largura para o texto */
+    main {
+        min-height: 0;
+        padding: 120px 0 56px;                /* 90px do header fixo + respiro */
+    }
+
+    .heroSection {
+        width: 100%;
+        padding: 0 var(--gutter);
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2.5rem;
+    }
+
+    .heroText h1 {
+        font-size: clamp(2.1rem, 4vw, 2.5rem);
+        text-wrap: balance;
+    }
+
+    .heroButton {
+        flex-wrap: wrap;
+    }
+
+    .justiceImage {
+        width: 100%;
+    }
+
+    /* Escritório: 2 colunas, com menos padding e gap */
+    .officeSection {
+        min-height: 0;
+        padding: 64px var(--gutter);
+        gap: 40px;
+    }
+
+    .officeContent h2 {
+        font-size: clamp(1.75rem, 3.6vw, 2.25rem);
+        margin-bottom: 24px;
+        text-wrap: balance;
+    }
+
+    .officeDescription {
+        font-size: 1rem;
+    }
+
+    .officeHighlights {
+        margin-top: 36px;
+    }
+
+    /* Áreas de Atuação: mantém 2 colunas */
+    .practiceSection {
+        min-height: 0;
+        padding: 64px var(--gutter);
+        gap: 40px;
+    }
+
+    .practiceHeader h2 {
+        font-size: clamp(1.75rem, 3.6vw, 2.25rem);
+        margin-bottom: 24px;
+        text-wrap: balance;
+    }
+
+    /* Diferenciais: 3 colunas compactas; a altura passa a ser a do conteúdo
+       (os 600px fixos fariam o texto vazar da seção) */
+    .differentialSection {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
+        height: auto;
+        padding: 56px var(--gutter);
+        gap: 16px;
+    }
+
+    .differentialOffice {
+        min-height: 0;
+        padding: 28px 20px;
+    }
+
+    .differentialOffice > span {
+        margin-bottom: 18px;
+    }
+
+    .titleDifferential {
+        font-size: 1.35rem;
+        margin-bottom: 14px;
+    }
+
+    .differentialOffice p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    /* Contato: escritórios em 2 × 2, mantendo as divisórias do desktop */
+    .contactSection {
+        padding: 56px var(--gutter);
+    }
+
+    .officeList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contactOffice {
+        min-height: 0;
+    }
+
+    .contactOffice:nth-child(odd) {
+        padding-left: 0;
+    }
+
+    .contactOffice:nth-child(even) {
+        padding-left: 28px;
+        border-right: none;
+    }
+
+    .contactOffice:nth-child(n + 3) {
+        border-top: 1px solid rgba(248, 248, 246, 0.2);
+    }
+
+    .developerContact {
+        flex-wrap: wrap;
+        gap: 6px 15px;
+    }
+}
+
+
+/*------------ CELULAR (até 767px) ------------*/
+@media (max-width: 767px) {
+
+    :root {
+        --gutter: 20px;
+    }
+
+    html {
+        scroll-padding-top: 0;
+    }
+
+    /* Header: logo em cima e links embaixo, quebrando em linhas (sem hambúrguer).
+       Deixa de ser fixo: em 2 linhas ocuparia cerca de 150px da tela durante toda a rolagem. */
+    #mainHeader {
+        position: relative;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 14px var(--gutter) 12px;
+    }
+
+    #mainNavigation ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px 18px;
+    }
+
+    #mainNavigation a {
+        display: inline-block;
+        padding: 6px 0;                       /* área de toque maior */
+    }
+
+    #mainNavigation li:last-child a {
+        padding: 10px 16px;
+    }
+
+    .downList {
+        margin-top: 8px;
+    }
+
+    /* Hero: 1 coluna e botões empilhados */
+    main {
+        flex-direction: column;
+        padding: 32px 0 56px;
+    }
+
+    .heroSection {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .heroText h1 {
+        font-size: clamp(1.9rem, 7.5vw, 2.1rem);
+    }
+
+    .heroButton {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 26px;
+    }
+
+    .heroLink {
+        text-align: center;
+    }
+
+    .justiceImage {
+        max-height: 340px;
+        object-fit: cover;
+    }
+
+    /* Escritório: imagem acima do texto */
+    .officeSection {
+        grid-template-columns: 1fr;
+        padding: 48px var(--gutter);
+        gap: 32px;
+    }
+
+    .officeImage {
+        max-width: 100%;
+        height: clamp(220px, 60vw, 380px);
+    }
+
+    .officeContent h2 {
+        font-size: clamp(1.55rem, 6.5vw, 1.75rem);
+        margin-bottom: 20px;
+    }
+
+    .officeDescription {
+        margin-top: 16px;
+        line-height: 1.7;
+    }
+
+    .officeHighlights {
+        margin-top: 28px;
+    }
+
+    /* Áreas de Atuação: 1 coluna */
+    .practiceSection {
+        grid-template-columns: 1fr;
+        padding: 48px var(--gutter);
+        gap: 32px;
+    }
+
+    .practiceHeader h2 {
+        font-size: clamp(1.55rem, 6.5vw, 1.75rem);
+        margin-bottom: 20px;
+    }
+
+    .practiceItem {
+        padding: 22px 0;
+    }
+
+    .practiceItem h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Diferenciais: blocos empilhados */
+    .differentialSection {
+        grid-template-columns: 1fr;
+        padding: 48px var(--gutter);
+        gap: 14px;
+    }
+
+    .differentialOffice {
+        max-width: none;
+        padding: 26px 22px;
+    }
+
+    .differentialOffice p {
+        max-width: 60ch;
+    }
+
+    /* Contato: 1 coluna (2 em celulares largos); a divisória passa a ser horizontal */
+    .contactSection {
+        padding: 44px var(--gutter);
+    }
+
+    .contactHeader {
+        margin-bottom: 24px;
+    }
+
+    .officeList {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+        column-gap: 28px;
+        border-top: none;
+    }
+
+    .contactOffice,
+    .contactOffice:nth-child(odd),
+    .contactOffice:nth-child(even) {
+        padding: 20px 0 22px;
+        border-right: none;
+        border-top: 1px solid rgba(248, 248, 246, 0.2);
+    }
+
+    .contactOffice a {
+        margin-top: 8px;
+        padding: 6px 0;
+    }
+
+    .generalContact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .generalContactInfo {
+        align-items: flex-start;
+    }
+
+    .generalContactInfo a {
+        padding: 4px 0;
+    }
+
+    .developerContact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
